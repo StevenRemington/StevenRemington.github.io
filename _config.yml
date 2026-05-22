@@ -1,0 +1,7 @@
+title: Steven Remington
+email: stevenrremington@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A digital workspace for compiler infrastructure, agentic systems, and hardware.
+baseurl: ""
+url: "https://www.sremington.com"
+theme: minima
