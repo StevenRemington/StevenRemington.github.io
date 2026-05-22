@@ -6,27 +6,41 @@ permalink: /projects/grimoire_cortex/
 
 # Grimoire Cortex: Edge AI Orchestration
 
-**Status:** Active Development  
-**Hardware Target:** Nvidia Jetson Orin Nano (Primary Node)  
-**Domain:** Agentic Systems, Edge Computing, Hardware/Software Co-design  
+**Status:** Active Development (Internal Alpha)  
+**Primary Discipline:** Agentic Systems / Systems Engineering  
+**Key Constraints:** 8GB RAM Budget, Passive Cooling, Offline-First Execution
 
-## Overview
-`Girmoire Cortex` is a custom AI orchestration environment designed from the ground up to run on constrained edge hardware, primarily targeting the Raspberry Pi. 
+## 1. The Constraints (Physical Boundaries)
+`Grimoire Cortex` is architected to thrive within the strict physical and thermal limits of edge hardware, specifically the **Nvidia Jetson Orin Nano**. 
 
-While most modern agentic frameworks assume cloud-scale compute and infinite memory, `Girmoire Cortex` is an exploration of efficiency. It focuses on how to intelligently orchestrate AI workflows, manage hardware resources, and execute complex agentic loops locally without relying on continuous cloud connectivity.
+*   **Memory:** Hard cap of 8GB (unified memory). The system is tuned to keep the orchestration overhead under 1GB, maximizing the KV cache and parameter space for 4-bit and 8-bit GGUF models.
+*   **Thermal:** Optimized for passive cooling. High-intensity loops are mitigated through asynchronous ritual dispatch to prevent thermal throttling in compact cyberdeck enclosures.
+*   **Connectivity:** Zero-trust cloud reliance. All inference and tool execution occurs locally to ensure operational autonomy in field environments.
 
-## Core Architecture
-The system is built to bridge the gap between high-level logical reasoning and low-level hardware constraints. 
+## 2. Architecture Decision Records (ADR)
 
-* **Resource-Aware Orchestration:** Dynamically allocating memory and processing cycles to prioritize essential agentic tasks on the Pi.
-* **Modular Hardware Integration:** Designed to sit at the center of a broader edge ecosystem, acting as the brain that can interface with auxiliary computing modules and microcontrollers.
-* **Custom Tooling:** Leveraging principles of compiler design and language infrastructure to create highly efficient, parsed command structures rather than relying on bloated standard libraries.
+### ADR-001: Local GGUF over Cloud APIs
+*   **Context:** Most modern agentic frameworks assume infinite cloud compute.
+*   **Decision:** Standardize on native `llama.cpp` integration for C++ model execution.
+*   **Rationale:** To achieve true agentic autonomy, the "Weight of the Node" must be physical. Local execution eliminates API latency, cost volatility, and data leakage.
+*   **Trade-off:** Limits model selection to the 3B-8B parameter range to maintain interactive token velocity.
 
-## Why Build This?
-The push toward ubiquitous AI often ignores the realities of edge computing. `Girmoire Cortex` serves as both a practical operating environment for custom hardware builds (like cyberdecks) and a research platform for optimizing how AI agents interact with their immediate physical and digital environments.
+### ADR-002: Asynchronous Ritual Execution
+*   **Context:** Synchronous tool-calling blocks the inference engine, causing UI stutter and engine stalls.
+*   **Decision:** Implement a decoupled "Ritual" pool for all I/O and hardware interaction.
+*   **Rationale:** By treating tool execution as an asynchronous side effect (a "Ritual"), the engine can continue managing state and context while the hardware layer performs physical operations.
 
-## Development Logs
-*(Links to specific technical deep-dives and update logs will populate here as development progresses.)*
+## 3. Hardware Bill of Materials (BOM)
 
-* [Coming Soon] Memory Management for Local Agents
-* [Coming Soon] Designing the Internal Command Parser
+| Component | Specification | Purpose |
+| :--- | :--- | :--- |
+| **Compute** | Nvidia Jetson Orin Nano (8GB) | Primary AI Orchestration & Inference |
+| **Storage** | 1TB NVMe Gen4 | Vector Store, Model Weights, & Event Logs |
+| **Power** | Omnicharge 20+ | Portable DC Power & UPS |
+| **I/O** | 7" Waveshare DSI Display | Real-time System Telemetry |
+
+## 4. Current Progress
+The system currently bridges high-level intent parsing with low-level hardware triggers. Current work is focused on optimizing the context window preservation during multi-turn agentic loops on the Jetson's unified memory architecture.
+
+---
+*Next Log: Designing the Internal Command Parser*
