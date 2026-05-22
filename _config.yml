@@ -5,6 +5,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://www.sremington.com"
 theme: minima
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
 collections:
   projects:
     output: true

@@ -1,0 +1,69 @@
+// 1. Define Brand Colors (Appalachian Gothic Palette)
+$brand-color:           #4b5320; // Moss
+$brand-color-light:     #6b7340;
+$brand-color-dark:      #2b3310;
+
+$site-title-color:      #3a3a3a; // Iron
+$text-color:            #1a1a1a; // Shadow
+$background-color:      #fcf5e5; // Parchment
+$code-background-color: #e2dabf; // Bone
+
+$link-base-color:       #8a0303; // Blood
+$link-visited-color:    #5a0303;
+$link-hover-color:      #1a1a1a;
+
+// 2. Custom Overrides
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+  background-color: $background-color;
+}
+
+.site-header {
+  border-top: 8px solid $brand-color;
+  border-bottom: 1px solid $code-background-color;
+  background-color: $background-color;
+}
+
+.site-title {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: $site-title-color !important;
+  
+  &:visited {
+    color: $site-title-color !important;
+  }
+}
+
+.site-nav {
+  background-color: $background-color;
+  border: 1px solid $code-background-color;
+  border-radius: 4px;
+}
+
+.page-content {
+  background-color: $background-color;
+}
+
+.wrapper {
+  max-width: -webkit-calc(900px - (30px * 2)); // Using standard spacing-unit
+  max-width:         calc(900px - (30px * 2));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $site-title-color;
+  font-weight: 700;
+}
+
+blockquote {
+  border-left: 4px solid $brand-color;
+  font-style: italic;
+  color: $brand-color-dark;
+}
+
+code {
+  background-color: $code-background-color;
+  border-radius: 3px;
+}
