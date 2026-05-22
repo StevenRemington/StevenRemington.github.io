@@ -1,7 +1,16 @@
 ---
-layout: default
-title: Steven Remington
+layout: home
+title: Home
 ---
 
-# Welcome to my digital workspace.
-I'm a software engineer focusing on compiler infrastructure, agentic systems, and custom language design.
+# Steven Remington
+**Senior Software Engineer | Compilers, C++, & Agentic Systems**
+
+Welcome to my workspace. I focus on language design, frontend architecture, and building tools that bridge hardware and AI.
+
+### Current Work
+*   **Compiler Infrastructure:** Exploring parsing strategies and custom language design.
+*   **Hardware / Cyberdeck:** Co-designing hardware and software for edge computing environments using Raspberry Pi and Jetson Orin Nano.
+
+---
+*More technical logs and project post-mortems coming soon.*
