@@ -18,19 +18,26 @@ body {
   font-variant-ligatures: common-ligatures;
   text-rendering: optimizeLegibility;
   background-color: $background-color;
+  color: $text-color;
+  
+  // Subtle "Aged" Vignette
+  background-image: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.05) 100%);
+  background-attachment: fixed;
 }
 
 .site-header {
-  border-top: 8px solid $brand-color;
-  border-bottom: 1px solid $code-background-color;
-  background-color: $background-color;
+  border-top: 12px solid $brand-color;
+  border-bottom: 2px double $code-background-color;
+  background-color: transparent;
+  padding-top: 20px;
 }
 
 .site-title {
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-weight: 900;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: $site-title-color !important;
+  font-family: serif;
   
   &:visited {
     color: $site-title-color !important;
@@ -38,32 +45,97 @@ body {
 }
 
 .site-nav {
-  background-color: $background-color;
-  border: 1px solid $code-background-color;
-  border-radius: 4px;
+  background-color: transparent;
+  border: none;
 }
 
 .page-content {
-  background-color: $background-color;
+  background-color: transparent;
 }
 
 .wrapper {
-  max-width: -webkit-calc(900px - (30px * 2)); // Using standard spacing-unit
-  max-width:         calc(900px - (30px * 2));
+  max-width: -webkit-calc(800px - (30px * 2));
+  max-width:         calc(800px - (30px * 2));
+}
+
+// 3. Folk Horror Atmospheric Details
+
+// Ritualistic Dividers
+hr {
+  border: none;
+  height: 1px;
+  background: $code-background-color;
+  position: relative;
+  margin: 3em 0;
+  overflow: visible;
+
+  &:after {
+    content: "◈ ◈ ◈";
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $background-color;
+    padding: 0 15px;
+    color: $brand-color;
+    font-size: 0.8em;
+    letter-spacing: 5px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: $site-title-color;
   font-weight: 700;
+  border-bottom: 1px solid rgba(75, 83, 32, 0.1);
+  padding-bottom: 5px;
+  margin-top: 1.5em;
+}
+
+// Manuscript Drop Cap (Applied via .post-content first paragraph)
+.page-content p:first-of-type::first-letter {
+  float: left;
+  font-size: 4em;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  color: $brand-color;
+  font-family: serif;
+}
+
+// "Blood-Glow" Links
+a {
+  color: $link-base-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    color: $link-hover-color;
+    border-bottom: 1px solid $brand-color;
+    text-shadow: 0 0 8px rgba(138, 3, 3, 0.2);
+  }
 }
 
 blockquote {
-  border-left: 4px solid $brand-color;
+  border-left: 5px solid $brand-color;
+  padding: 10px 20px;
+  background: rgba(226, 218, 191, 0.3); // Faded Bone
   font-style: italic;
   color: $brand-color-dark;
+  border-radius: 0 5px 5px 0;
 }
 
 code {
   background-color: $code-background-color;
-  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2px 5px;
+  font-size: 0.9em;
+}
+
+.site-footer {
+  border-top: 1px solid $code-background-color;
+  background-color: transparent;
+  color: $brand-color-dark;
 }
