@@ -2,6 +2,8 @@
 layout: page
 title: "ForestFrames"
 permalink: /projects/forest_frames/
+status: "Completed / Stable"
+excerpt: "Enterprise-grade firmware for the Seeed Studio XIAO ESP32S3 Sense, featuring real-time LUT filtering and SPI bus arbitration."
 ---
 
 # ForestFrames: Appalachian Gothic Imaging

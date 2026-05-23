@@ -2,6 +2,8 @@
 layout: page
 title: "Grimoire Cortex"
 permalink: /projects/grimoire_cortex/
+status: "Active Development"
+excerpt: "Custom AI orchestration environment designed for autonomous, offline-first agentic loops on constrained edge hardware."
 ---
 
 # Grimoire Cortex: Edge AI Orchestration

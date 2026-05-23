@@ -12,19 +12,17 @@ This digital workspace serves as a repository for ongoing research into agentic 
 
 ### Primary Initiatives
 
-#### [Grimoire Cortex](/projects/grimoire_cortex/)
-**Edge AI Orchestration | C++20 | Jetson Orin Nano**  
-A custom orchestration environment designed for autonomous, offline-first agentic loops. Focuses on local GGUF execution and asynchronous "Ritual" dispatch within a strict 8GB memory envelope.
+{% assign active_projects = site.projects | where: "status", "Active Development" %}
+{% for project in active_projects %}
+  <div class="active-project" style="margin-bottom: 2em;">
+    <h4 style="margin-bottom: 0.2em;">
+      <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+    </h4>
+    <p style="font-size: 0.95em; line-height: 1.4;">{{ project.excerpt | default: "Active research and development." }}</p>
+  </div>
+{% endfor %}
 
-#### [ForestFrames](/projects/forest_frames/)
-**Appalachian Gothic Imaging | C++ / Arduino | ESP32S3**  
-Enterprise-grade firmware for the XIAO ESP32S3 Sense. Features real-time LUT filtering, strict SPI bus arbitration, and a custom WiFi-based gallery portal.
-
-#### [The Weight of the Node](/essays/ethics-in-edge-ai/)
-**Essay | Ethics & Systems Architecture**  
-A deep dive into why technical infrastructure is never morally neutral and the ethical responsibility of architecting autonomous systems on the edge.
-
----
+[View All Projects ◈](/projects/)
 
 ### Technical Focus
 *   **Systems Engineering:** C++20, custom memory management, and high-performance parsing strategies.
