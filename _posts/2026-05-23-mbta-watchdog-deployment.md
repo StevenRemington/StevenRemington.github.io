@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Transit Accountability: Deploying the MBTA Watchdog"
-date: 2026-05-23 14:00:00 -0400
+date: 2026-05-23 11:00:00 -0400
 excerpt: "Deploying a production-grade monitoring suite to a Raspberry Pi to hold Keolis accountable for Commuter Rail performance."
 tags: [MBTA, Python, RaspberryPi, automation, MetroWest]
 project: mbta_watchdog
