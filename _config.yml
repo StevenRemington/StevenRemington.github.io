@@ -6,6 +6,11 @@ baseurl: ""
 url: "https://www.sremington.com"
 theme: minima
 
+header_pages:
+  - index.md
+  - about.md
+  - posts.md
+
 sass:
   style: compressed
   sass_dir: _sass
