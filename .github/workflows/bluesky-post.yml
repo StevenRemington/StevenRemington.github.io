@@ -1,0 +1,30 @@
+name: Bluesky Crosspost
+on:
+  push:
+    paths:
+      - '_posts/**'
+    branches:
+      - main
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Necessary to detect changed files
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install atproto
+
+      - name: Run crosspost script
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
+        run: python scripts/bluesky_crosspost.py

@@ -24,3 +24,6 @@ collections:
   essays:
     output: true
     permalink: /essays/:path/
+
+plugins:
+  - jekyll-feed
