@@ -25,9 +25,9 @@ def parse_post(file_path):
     date_match = re.search(r'^(\d{4}-\d{2}-\d{2})', filename)
     date_str = date_match.group(1) if date_match else datetime.now().strftime('%Y-%m-%d')
     
-    # Construct URL (assumes permalink style /YYYY/MM/DD/title.html or similar)
+    # Construct URL (assumes permalink style /YYYY/MM/DD/title.html)
     slug = filename[11:].replace('.md', '').replace('.markdown', '')
-    url = f"https://www.sremington.com/{date_str.replace('-', '/')}/{slug}/"
+    url = f"https://www.sremington.com/{date_str.replace('-', '/')}/{slug}.html"
     
     return title, url
 
