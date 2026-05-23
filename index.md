@@ -33,4 +33,16 @@ A deep dive into why technical infrastructure is never morally neutral and the e
 *   **Craft:** Bridging the gap between digital architecture and physical fabrication (leather, foam, and electronics).
 
 ---
-*More technical logs and hardware build post-mortems coming soon.*
+### Recent Logs
+
+{% for post in site.posts limit:3 %}
+  <div class="recent-post" style="margin-bottom: 1.5em;">
+    <h4 style="margin: 0;">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h4>
+    <small style="color: #6b7340;">{{ post.date | date: "%B %d, %Y" }}</small>
+    <p style="font-size: 0.95em; margin-top: 0.3em;">{{ post.excerpt | strip_html }}</p>
+  </div>
+{% endfor %}
+
+[View All Posts ◈](/posts/)

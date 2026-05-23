@@ -43,4 +43,10 @@ permalink: /projects/grimoire_cortex/
 The system currently bridges high-level intent parsing with low-level hardware triggers. Current work is focused on optimizing the context window preservation during multi-turn agentic loops on the Jetson's unified memory architecture.
 
 ---
-*Next Log: Designing the Internal Command Parser*
+## Development Logs
+{% assign related_posts = site.posts | where: "project", "grimoire_cortex" %}
+{% for post in related_posts %}
+* [{{ post.title }}]({{ post.url | relative_url }}) ({{ post.date | date: "%B %d, %Y" }})
+{% else %}
+*(Technical deep-dives and update logs will populate here as development progresses.)*
+{% endfor %}

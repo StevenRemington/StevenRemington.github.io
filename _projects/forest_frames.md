@@ -45,3 +45,9 @@ permalink: /projects/forest_frames/
 
 ---
 *Technical deep-dive on SPI Bus Arbitration coming soon.*
+
+## Development Logs
+{% assign related_posts = site.posts | where: "project", "forest_frames" %}
+{% for post in related_posts %}
+* [{{ post.title }}]({{ post.url | relative_url }}) ({{ post.date | date: "%B %d, %Y" }})
+{% endfor %}
