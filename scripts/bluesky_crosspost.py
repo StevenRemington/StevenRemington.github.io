@@ -2,7 +2,7 @@ import os
 import re
 import sys
 from datetime import datetime
-from atproto import Client
+from atproto import Client, client_utils
 
 def get_latest_post(posts_dir):
     posts = [f for f in os.listdir(posts_dir) if f.endswith('.md') or f.endswith('.markdown')]
@@ -26,7 +26,6 @@ def parse_post(file_path):
     date_str = date_match.group(1) if date_match else datetime.now().strftime('%Y-%m-%d')
     
     # Construct URL (assumes permalink style /YYYY/MM/DD/title.html or similar)
-    # Most Jekyll sites use /YYYY/MM/DD/title.html or slugified title
     slug = filename[11:].replace('.md', '').replace('.markdown', '')
     url = f"https://www.sremington.com/{date_str.replace('-', '/')}/{slug}/"
     
@@ -48,15 +47,18 @@ def main():
 
     title, url = parse_post(latest_post_path)
     
-    # Prepare the skeet text
-    text = f"New Log: {title}\n\n{url}"
-    
+    # Initialize Client
     print(f"Connecting to Bluesky as {bsky_handle}...")
     client = Client()
     client.login(bsky_handle, bsky_password)
     
-    print(f"Posting: {text}")
-    client.send_post(text=text)
+    # Build the rich text with "read more" hyperlink
+    text_builder = client_utils.TextBuilder()
+    text_builder.text(f"{title}\n\n")
+    text_builder.link("read more", url)
+    
+    print(f"Posting: {title} with 'read more' link")
+    client.send_post(text_builder)
     print("Successfully posted to Bluesky!")
 
 if __name__ == "__main__":
