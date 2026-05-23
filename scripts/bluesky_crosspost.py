@@ -54,7 +54,7 @@ def main():
     
     # Build the rich text with "read more" hyperlink
     text_builder = client_utils.TextBuilder()
-    text_builder.text(f"{title}\n\n")
+    text_builder.text(f"New Blog Post: {title}\n\n")
     text_builder.link("read more", url)
     
     print(f"Posting: {title} with 'read more' link")
