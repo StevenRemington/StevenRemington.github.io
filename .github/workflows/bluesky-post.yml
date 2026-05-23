@@ -5,6 +5,7 @@ on:
       - '_posts/**'
     branches:
       - main
+  workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
 
 jobs:
   post:
