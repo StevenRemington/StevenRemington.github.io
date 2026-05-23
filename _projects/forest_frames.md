@@ -2,13 +2,13 @@
 layout: page
 title: "ForestFrames"
 permalink: /projects/forest_frames/
-status: "Completed / Stable"
-excerpt: "Enterprise-grade firmware for the Seeed Studio XIAO ESP32S3 Sense, featuring real-time LUT filtering and SPI bus arbitration."
+status: "Active Development"
+excerpt: "Enterprise-grade firmware for the XIAO ESP32S3 Sense. Currently in the physical fabrication and enclosure assembly phase."
 ---
 
 # ForestFrames: Appalachian Gothic Imaging
 
-**Status:** Completed / Stable  
+**Status:** Physical Fabrication / Active Development  
 **Primary Discipline:** Embedded Systems / Firmware Engineering  
 **Key Constraints:** Shared SPI Bus, 8MB PSRAM, Interrupt-Driven I/O
 
