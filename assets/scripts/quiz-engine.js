@@ -221,7 +221,10 @@
         const spec = quizData.results.subspecialties[key];
         const entry = document.createElement('div');
         entry.className = 'library-entry';
-        entry.innerHTML = `<h5>${spec.title}</h5><p>${spec.horror} ${spec.manifestation}</p>`;
+        entry.innerHTML = `<h5>${spec.title}</h5>
+          <p><strong>Benefit:</strong> ${spec.benefit}</p>
+          <p><strong>Examples:</strong> ${spec.examples}</p>
+          <p><strong>Cost:</strong> ${spec.horror}</p>`;
         container.appendChild(entry);
       });
     }
