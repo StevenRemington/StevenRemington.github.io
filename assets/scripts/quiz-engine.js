@@ -106,7 +106,7 @@
     }
 
     const combo = quizData.results.combinations[comboKey];
-    elements.buildTitle.innerText = combo.title;
+    elements.buildTitle.innerHTML = `${combo.title}<br><span class="ritual-combination">${combo.combination}</span>`;
     elements.buildDescription.innerText = combo.description;
 
     // 3. Render Loadout
@@ -115,7 +115,10 @@
       const spec = quizData.results.subspecialties[key];
       const item = document.createElement('div');
       item.className = 'loadout-item';
-      item.innerHTML = `<h4>${spec.title}</h4><p><strong>The Horror:</strong> ${spec.horror}</p><p>${spec.manifestation}</p>`;
+      item.innerHTML = `<h4>${spec.title}</h4>
+        <p class="loadout-benefit"><strong>Benefit:</strong> ${spec.benefit}</p>
+        <p><strong>The Horror:</strong> ${spec.horror}</p>
+        <p>${spec.manifestation}</p>`;
       elements.buildLoadout.appendChild(item);
     });
 
@@ -201,7 +204,7 @@
     for (const [key, combo] of Object.entries(quizData.results.combinations)) {
       const entry = document.createElement('div');
       entry.className = 'library-entry';
-      entry.innerHTML = `<h5>${combo.title}</h5><p>${combo.description}</p>`;
+      entry.innerHTML = `<h5>${combo.title} <small>(${combo.combination})</small></h5><p>${combo.description}</p>`;
       comboContainer.appendChild(entry);
     }
 

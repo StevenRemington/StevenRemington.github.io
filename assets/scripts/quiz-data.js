@@ -167,32 +167,117 @@ const quizData = {
       A_Phantom: { title: "The Phantom", quote: "The Semantic Ghost.", description: "You strike from the gaps between realities. You move through the world unseen and unheard, bypassing physical and conceptual security." }
     },
     combinations: {
-      Pure_Bio: { title: "The Apex Flesh", description: "You have completely surrendered your humanity to evolutionary chaos. Your body is a terrifying, ever-shifting ecosystem of Pandemonium biology." },
-      Pure_Cyber: { title: "The Chrome Purist", description: "Meat is weak, and the Thrum is a glitch. You have replaced your vulnerabilities with cold, unfeeling logic and steel." },
-      Pure_Wytch: { title: "The Semantic Architect", description: "You exist purely as intent. Your mind is a weapon that bends the fabric of reality, though your soul is hollowed by sacrifice." },
-      Bio_Cyber: { title: "The Iron-Flesh Engine", description: "A brutal hybrid. You anchor your terrifying biological mutations with a chassis of cold steel, creating a contradictory but unstoppable force." },
-      Bio_Wytch: { title: "The Pandemonium Cultivator", description: "You mix flesh-craft with mind-craft. You don't just negotiate with the Thrum; you grow its nightmares inside your own veins." },
-      Cyber_Wytch: { title: "The Corporate Occultist", description: "You merge high-tech oversight with ancient ritual. You run your Wytchcraft through data-streams and use chrome to anchor your spells." },
-      Tri_Hybrid: { title: "The Convergence Anomaly", description: "You are a living contradiction. Flesh, metal, and magic war within you, making you a completely unpredictable, highly volatile entity." }
+      Pure_Bio: { title: "The Apex Flesh", combination: "Biogenesis Purist", description: "You have completely surrendered your humanity to evolutionary chaos. Your body is a terrifying, ever-shifting ecosystem of Pandemonium biology." },
+      Pure_Cyber: { title: "The Chrome Purist", combination: "Cyberware Purist", description: "Meat is weak, and the Thrum is a glitch. You have replaced your vulnerabilities with cold, unfeeling logic and steel." },
+      Pure_Wytch: { title: "The Semantic Architect", combination: "Wytchcraft Purist", description: "You exist purely as intent. Your mind is a weapon that bends the fabric of reality, though your soul is hollowed by sacrifice." },
+      Bio_Cyber: { title: "The Iron-Flesh Engine", combination: "Biogenesis + Cyberware", description: "A brutal hybrid. You anchor your terrifying biological mutations with a chassis of cold steel, creating a contradictory but unstoppable force." },
+      Bio_Wytch: { title: "The Pandemonium Cultivator", combination: "Biogenesis + Wytchcraft", description: "You mix flesh-craft with mind-craft. You don't just negotiate with the Thrum; you grow its nightmares inside your own veins." },
+      Cyber_Wytch: { title: "The Corporate Occultist", combination: "Cyberware + Wytchcraft", description: "You merge high-tech oversight with ancient ritual. You run your Wytchcraft through data-streams and use chrome to anchor your spells." },
+      Tri_Hybrid: { title: "The Convergence Anomaly", combination: "Bio + Cyber + Wytch", description: "You are a living contradiction. Flesh, metal, and magic war within you, making you a completely unpredictable, highly volatile entity." }
     },
     subspecialties: {
-      S_Symbiotic: { title: "Symbiotic Branch", horror: "Hosting a sentient 'Passenger' from Pandemonium to provide specialized services.", manifestation: "The parasite provides power in exchange for nutrients, but it will consume your own tissues if left unfed." },
-      S_Morphological: { title: "Morphological Branch", horror: "Shifting physical form through mutable Pandemonium-derived chitin and bone.", manifestation: "Rapid shifts can lead to permanent deformities or a total collapse of biological integrity as your body 'forgets' its original shape." },
-      S_Pheromonal: { title: "Pheromonal Branch", horror: "Biological hacking through the manipulation of pheromones, neuro-toxins, and hormones.", manifestation: "Constant manipulation ravages your endocrine system, leading to permanent emotional numbness or volatile mood swings." },
-      S_Proliferant: { title: "Proliferant Branch", horror: "Utilizing micro-organism colonies and fungal networks to process data and manage environments.", manifestation: "Constant feedback from the hive-mind makes it difficult to distinguish your own thoughts from the colony's signals." },
-      S_Trophic: { title: "Trophic Branch", horror: "The total optimization of internal biology and chemical synthesis for survival and regeneration.", manifestation: "The body runs at a lethal temperature, requiring constant management of body heat and caloric intake to avoid cooking from the inside out." },
-      S_Mechanist: { title: "Mechanist Branch", horror: "Interfacing a human mind with the complex logistics and infrastructure of a Corporate City-State.", manifestation: "Heavy neural rewiring leads to a 'Cold Logic' personality, distancing your mind from biological empathy as you adapt to data structures." },
-      S_Perceptics: { title: "Perceptics Branch", horror: "Enhancement of the human sensory suite to acquire raw, unfiltered data and pierce magical illusions.", manifestation: "Chronic sensory overload causes permanent detachment from natural perception and a struggle to process environments without data overlays." },
-      S_Augmentation: { title: "Augmentation Branch", horror: "Replacing biological components with pre-breach chrome for raw physical power and durability.", manifestation: "Heavy augmentation leads to a gradual loss of physical sensation and a mental disconnect from your own biological body." },
-      S_Sanitization: { title: "Sanitization Branch", horror: "Utilizing specialized tools to actively suppress The Thrum and anchor 'Hard Reality'.", manifestation: "Sanitization fields are physically nauseating, causing chronic migraines and severe neural 'burn-out' in the host." },
-      S_Processing: { title: "Processing Branch", horror: "Pushing the brain beyond biological data limits to manage high-speed data and reaction times.", manifestation: "Biological components literally cook themselves during prolonged overclocking, leading to permanent cognitive degradation or system collapse." },
-      S_Taibhsear: { title: "Taibhsear", horror: "Using the mind as a sieve to isolate specific frequencies from the noise of The Thrum.", manifestation: "Filtering the world too often leads to a total loss of self-identity, leaving you a 'Semantic Ghost' with no signature of your own." },
-      S_Wyrding: { title: "Wyrding", horror: "The act of probability manipulation by stabilizing a single desired outcome within The Thrum.", manifestation: "Creating semantic gravity wells draws the attention of Pandemonium entities who hunger for your luck, turning fortune into a debt." },
-      S_Alchemy: { title: "Alchemy & Pharma", horror: "The imbuement of intent and reality-warping properties into physical, mobile products.", manifestation: "Obsession with hyper-specificity makes the power fragile; one missed detail in the stabilization protocol can result in a lethal backlash." },
-      S_Weft: { title: "Weft-Work", horror: "Creating persistent blessings, hexes, and wards by re-weaving the signature of The Thrum.", manifestation: "To fuel persistent change, you must literally 'forget' a concept or memory, hollowing out your past to build your power." },
-      S_Uchronia: { title: "Uchronia", horror: "Spatial relocation through 'Spatial Amnesia', forcing the universe to forget your starting coordinates.", manifestation: "Frequent uchronia makes the universe 'forget' where you belong, potentially leaving you lost in the gaps between realities." },
-      S_Covenants: { title: "Covenants", horror: "Forging a contract with an entity from Pandemonium to bypass your own willpower limitations.", manifestation: "Breaking your Taboo results in the instant withdrawal of stability, causing your own semantic signature to unravel instantly." },
-      S_Maya: { title: "Maya", horror: "The art of destabilizing consensus perception to manipulate the 'Grand Illusion' of reality.", manifestation: "If maintained too long, consensus inertia may lock a false identity permanently, causing you to become the lie you projected." }
+      S_Symbiotic: { 
+        title: "Symbiotic Branch", 
+        benefit: "Grants access to specialized sentient 'passengers' that provide utility like universal translation or multi-spectral vision.",
+        horror: "Hosting a sentient 'Passenger' from Pandemonium who feeds on your own tissues if not regularly sated with nutrients.", 
+        manifestation: "You are a landlord for a monster, sharing your nervous system with a foreign intelligence that is never truly docile." 
+      },
+      S_Morphological: { 
+        title: "Morphological Branch", 
+        benefit: "Allows for rapid physical adaptation, growing dynamic armor, weaponry, or additional limbs on demand.",
+        horror: "The loss of a permanent physical shape as your body becomes a shifting lattice of chitin and muscle.", 
+        manifestation: "Your body may 'forget' its original human form, leading to permanent deformities or a total collapse of biological integrity." 
+      },
+      S_Pheromonal: { 
+        title: "Pheromonal Branch", 
+        benefit: "Enables total social and physical manipulation by hacking the chemical signals of those around you.",
+        horror: "The death of genuine emotion as your own endocrine system is ravaged by constant signal spoofing.", 
+        manifestation: "You command any room with a scent, but find yourself trapped in a scorched wasteland of permanent emotional numbness." 
+      },
+      S_Proliferant: { 
+        title: "Proliferant Branch", 
+        benefit: "Utilizes fungal and bacterial networks for high-scale data processing and environmental oversight.",
+        horror: "Identity erosion as you become a node in a hive-network, catching yourself thinking in the plural.", 
+        manifestation: "Your individual 'I' is slowly being digested by the colony you host, replaced by the collective 'We'." 
+      },
+      S_Trophic: { 
+        title: "Trophic Branch", 
+        benefit: "Total internal optimization allowing for near-instant cellular regeneration and survival in lethal environments.",
+        horror: "The Metabolic Fever, where your body runs at a temperature that would cook a normal human.", 
+        manifestation: "You are nearly unkillable but trapped in a constant, agonizing state of starvation and internal meltdown." 
+      },
+      S_Mechanist: { 
+        title: "Mechanist Branch", 
+        benefit: "Direct neural interface with city-state infrastructure, providing control over power grids and automated logistics.",
+        horror: "The development of a 'Cold Logic' personality as your mind adapts to efficiency-based data structures.", 
+        manifestation: "Biological empathy becomes an 'error' in your code; you see the world as a logistics problem rather than a human one." 
+      },
+      S_Perceptics: { 
+        title: "Perceptics Branch", 
+        benefit: "Enhancement of the human sensory suite to acquire raw data, track ghosts, and pierce magical illusions.",
+        horror: "Chronic sensory overload and a permanent detachment from natural human perception.", 
+        manifestation: "You cannot see a smile without a data-overlay telling you its frequency; the natural world is a cage of unfiltered info." 
+      },
+      S_Augmentation: { 
+        title: "Augmentation Branch", 
+        benefit: "Traditional high-end chrome providing superhuman strength, speed, and durability for heavy combat.",
+        horror: "The gradual loss of physical sensation and the development of phantom limb syndromes.", 
+        manifestation: "You can crush steel with your bare hands but can no longer feel the warmth of a fire or the touch of a hand." 
+      },
+      S_Sanitization: { 
+        title: "Sanitization Branch", 
+        benefit: "Actively suppresses The Thrum to create 'Safe Zones' and neutralize bio-organic or magical threats.",
+        horror: "Intense biological nausea and agonizing migraines caused by the portable Hard Reality anchors you host.", 
+        manifestation: "You are a walking void, a hunter who carries the heavy silence of the city-state wherever you go." 
+      },
+      S_Processing: { 
+        title: "Processing Branch", 
+        benefit: "Cognitive overclocking that makes the world appear to slow down, granting impossible reaction times.",
+        horror: "Permanent cognitive degradation as your brain's biological components literally cook themselves during use.", 
+        manifestation: "You trade your future for moments of perfect reaction, feeling the neural burn with every accelerated second." 
+      },
+      S_Taibhsear: { 
+        title: "Taibhsear", 
+        benefit: "Seership that allows for mind-reading, telepathic communication, and intuiting historical echoes.",
+        horror: "Total loss of self-identity as you filter out the noise of the world and accidentally sieve out your own signature.", 
+        manifestation: "You are becoming a 'Semantic Ghost'—physically present but conceptually hollow, filled only with others' echoes." 
+      },
+      S_Wyrding: { 
+        title: "Wyrding", 
+        benefit: "Probability manipulation by creating semantic gravity wells around a single desired outcome.",
+        horror: "Drawing the attention of Pandemonium entities who are very interested in why you are hogging all the success.", 
+        manifestation: "Your luck is not a gift but a debt; every stabilized future is a bill that will eventually come due." 
+      },
+      S_Alchemy: { 
+        title: "Alchemy & Pharma", 
+        benefit: "The ability to bottle stability into physical reagents, creating miracles with hyper-specific effects.",
+        horror: "The fragility of perfection, where one missed detail in the protocol results in a lethal reality-backlash.", 
+        manifestation: "You are a slave to the 'Particular', obsessing over exact timings and reagents to avoid a liquid nightmare." 
+      },
+      S_Weft: { 
+        title: "Weft-Work", 
+        benefit: "The creation of persistent blessings, hexes, and wards that rewrite the Thrum signature of an area or person.",
+        horror: "Memory sacrifice, where you must literally 'forget' a concept or experience to fuel the working.", 
+        manifestation: "You are a powerful architect of reality, but you are becoming a hollow shell, one forgotten memory at a time." 
+      },
+      S_Uchronia: { 
+        title: "Uchronia", 
+        benefit: "Spatial relocation through 'Spatial Amnesia', skipping across space by convincing the universe you are already there.",
+        horror: "Spatial amnesia where the universe 'forgets' where you belong, potentially losing you in the gaps between realities.", 
+        manifestation: "You move through the not-time and not-place, risking realizing one day that you have no semantic anchor to anywhere." 
+      },
+      S_Covenants: { 
+        title: "Covenants", 
+        benefit: "Bypassing willpower limitations by tying your frequency to a stable, non-human patron from Pandemonium.",
+        horror: "The crushing weight of a life-long Taboo that will unravel your soul instantly if ever broken.", 
+        manifestation: "You wield immense power, as long as you never look at a mirror or speak your name. You are a node for another's will." 
+      },
+      S_Maya: { 
+        title: "Maya", 
+        benefit: "Destabilizing consensus perception to reshape the environment or project a false identity through glamours.",
+        horror: "Becoming the lie as consensus inertia locks your false identity in place permanently.", 
+        manifestation: "You are the master of the Grand Illusion, but if you hold the mask too long, you might forget who was beneath it." 
+      }
     }
   }
 };

@@ -158,24 +158,43 @@ permalink: /projects/the-thrum-quiz/
   margin-bottom: 3em;
 }
 
+.ritual-combination {
+  display: inline-block;
+  font-size: 0.8em;
+  color: #6b7340;
+  border: 1px solid #6b7340;
+  padding: 2px 10px;
+  margin-top: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .ritual-description {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 1em auto 0 auto;
   font-size: 1.1em;
   line-height: 1.6;
 }
 
 .loadout-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
   margin: 2em 0;
+}
+
+@media (max-width: 800px) {
+  .loadout-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .loadout-item {
   padding: 1.5em;
   background: rgba(226, 218, 191, 0.3);
   border-top: 4px solid #8a0303;
+  display: flex;
+  flex-direction: column;
 }
 
 .loadout-item h4 {
@@ -183,11 +202,23 @@ permalink: /projects/the-thrum-quiz/
   color: #8a0303;
 }
 
+.loadout-benefit {
+  font-style: italic;
+  margin-bottom: 1em;
+  color: #4b5320;
+}
+
 .charts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
   margin: 3em 0;
+}
+
+@media (max-width: 900px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .chart-container {
