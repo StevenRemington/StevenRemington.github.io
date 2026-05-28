@@ -74,6 +74,11 @@ permalink: /projects/the-thrum-quiz/
       <h3 class="ritual-subtitle">THE LIBRARY OF POWER</h3>
       <p class="ritual-meta" style="text-align: center;">All known paths of stabilization and evolution.</p>
       
+      <div class="library-section" style="margin-bottom: 3em;">
+        <h4 class="system-title" style="background: rgba(0,0,0,0.05);">UNIQUE BUILD TITLES</h4>
+        <div id="library-combos" class="library-grid"></div>
+      </div>
+
       <div class="library-grid">
         <div class="library-section">
           <h4 class="system-title bio">BIOGENESIS</h4>

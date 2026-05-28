@@ -2,7 +2,7 @@ const quizData = {
   questions: [
     {
       id: 1,
-      text: "A Kenning & Co. 'Inquisitor' sweep enters your sector, projecting a localized 'Hard Reality' field.",
+      text: "How do you react when a Kenning & Co. 'Inquisitor' sweep enters your sector and projects a localized 'Hard Reality' field?",
       context: "**Hard Reality:** A technology used by the corporate City-States to stabilize the laws of physics, effectively 'killing' magic and causing intense biological nausea in the unaugmented.",
       options: [
         { text: "Produce my identification and remain still; the safety of order outweighs the temporary discomfort.", scores: { B_Corpo: 2, A_Anchor: 1 } },
@@ -12,7 +12,7 @@ const quizData = {
     },
     {
       id: 2,
-      text: "You find a pre-breach artifact leaking 'The Thrum' into the surrounding air.",
+      text: "What is your approach to a pre-breach artifact that is leaking 'The Thrum' into the surrounding air?",
       context: "**The Thrum:** The infinite, chaotic substrate of reality. It is the source of all power, but its unfiltered presence causes mutation, madness, and the unraveling of physical laws.",
       options: [
         { text: "Log it with the authorities; such volatility must be harnessed and stabilized for the state.", scores: { B_Corpo: 2, S_Sanitization: 1 } },
@@ -32,7 +32,7 @@ const quizData = {
     },
     {
       id: 4,
-      text: "A feral Thrum-beast blocks your path. How do you handle it?",
+      text: "How do you handle a feral Thrum-beast that is blocking your path?",
       context: "**Thrum-beast:** A creature from Pandaemonium or a mutated animal that has lost its biological stability, becoming a shifting mass of eyes, teeth, and raw intent.",
       options: [
         { text: "Shift my bone density and grow chitinous plating to force it to yield through raw physical dominance.", scores: { S_Morphological: 3, A_Anchor: 1 } },
@@ -43,7 +43,8 @@ const quizData = {
     },
     {
       id: 5,
-      text: "You must bypass a high-security 'Hard Reality' vault. Your methodology?",
+      text: "Which methodology do you use to bypass a high-security 'Hard Reality' vault?",
+      context: "**Sanitization:** The specialized use of technology to actively suppress The Thrum and anchor 'Hard Reality'. It creates 'Safe Zones' where magic cannot function, but causes intense biological nausea in the user.",
       options: [
         { text: "Deploy an active Sanitization pulse to create a 'dead-zone' within their field, then walk through the gap.", scores: { S_Sanitization: 3, A_Anchor: 1 } },
         { text: "Interface with the building's biological oversight-mold, hacking the 'Wetware' that manages the locks.", scores: { S_Proliferant: 3, A_Conduit: 1 } },
@@ -53,7 +54,7 @@ const quizData = {
     },
     {
       id: 6,
-      text: "To gain critical intel from a high-value target, you would...",
+      text: "How would you gain critical intel from a high-value target who refuses to cooperate?",
       options: [
         { text: "Filter my mind into theirs, sifting through their memories like a sieve until the truth remains.", scores: { S_Taibhsear: 3, A_Conduit: 1 } },
         { text: "Administer a custom-brewed Alchemical reagent that forces their semantic signature to speak only truth.", scores: { S_Alchemy: 3, A_Weaver: 1 } },
@@ -63,7 +64,7 @@ const quizData = {
     },
     {
       id: 7,
-      text: "In a brutal, unexpected street fight, you prioritize...",
+      text: "What do you prioritize in a brutal, unexpected street fight?",
       options: [
         { text: "Regenerating my wounds as fast as they can be dealt; I will win through metabolic endurance.", scores: { S_Trophic: 3, A_Anchor: 1 } },
         { text: "Using raw titanium bone-lacing and hydraulic punches to break their chassis with one strike.", scores: { S_Augmentation: 3, A_Anchor: 1 } },
@@ -73,7 +74,7 @@ const quizData = {
     },
     {
       id: 8,
-      text: "You are tasked with protecting a sanctuary from a 'Thrum-Storm.' How do you do it?",
+      text: "How do you protect a sanctuary from an encroaching 'Thrum-Storm'?",
       context: "**Thrum-Storm:** A localized collapse of reality where conceptual frequencies bleed into the physical world, causing spontaneous changes in gravity, time, and matter.",
       options: [
         { text: "I sacrifice a significant memory—the face of a loved one—to weave a persistent ward of protection.", scores: { S_Weft: 3, A_Weaver: 1 } },
@@ -84,7 +85,7 @@ const quizData = {
     },
     {
       id: 9,
-      text: "When facing a choice between personal cost and power, you'd rather lose...",
+      text: "When facing a choice between personal cost and power, what are you most willing to lose?",
       options: [
         { text: "My empathy. I prefer the cold efficiency of a machine interface to the burden of feeling.", scores: { S_Mechanist: 3, A_Conduit: 1 } },
         { text: "My physical sensation. I will trade the ability to feel a touch for the strength to crush a skull.", scores: { S_Augmentation: 3, A_Anchor: 1 } },
@@ -94,7 +95,7 @@ const quizData = {
     },
     {
       id: 10,
-      text: "To you, the greatest horror of power is...",
+      text: "To you, what is the greatest horror associated with power?",
       options: [
         { text: "Being lost in the gaps between realities, never truly being 'anywhere' again.", scores: { S_Uchronia: 3 } },
         { text: "Realizing your body is no longer yours, but a host for a starving Pandemonium passenger.", scores: { S_Symbiotic: 3 } },
@@ -104,7 +105,7 @@ const quizData = {
     },
     {
       id: 11,
-      text: "How do you view your own biology?",
+      text: "How do you view your own biology in the context of survival?",
       options: [
         { text: "As a machine that is currently under-performing and needs better parts.", scores: { S_Augmentation: 2, S_Processing: 1 } },
         { text: "As a fertile garden that I must cultivate with the best strains of the Thrum.", scores: { S_Trophic: 2, S_Morphological: 1 } },
@@ -114,17 +115,17 @@ const quizData = {
     },
     {
       id: 12,
-      text: "In a team of four, you are the one who...",
+      text: "Which role do you naturally fill within a team of four?",
       options: [
-        { text: "Stands in the front, absorbing the trauma so the others can work.", scores: { A_Anchor: 3, S_Trophic: 1 } },
-        { text: "Directly manipulates the battlefield's frequency to keep the enemy off-balance.", scores: { A_Weaver: 3, S_Wyrding: 1 } },
-        { text: "Provides the oversight and data-feeds that ensure no one is ever surprised.", scores: { A_Conduit: 3, S_Perceptics: 1 } },
-        { text: "Disappears entirely, strike-point to strike-point, ending the fight before it starts.", scores: { A_Phantom: 3, S_Uchronia: 1 } }
+        { text: "Standing in the front, absorbing the trauma so the others can work.", scores: { A_Anchor: 3, S_Trophic: 1 } },
+        { text: "Directly manipulating the battlefield's frequency to keep the enemy off-balance.", scores: { A_Weaver: 3, S_Wyrding: 1 } },
+        { text: "Providing the oversight and data-feeds that ensure no one is ever surprised.", scores: { A_Conduit: 3, S_Perceptics: 1 } },
+        { text: "Disappearing entirely, strike-point to strike-point, ending the fight before it starts.", scores: { A_Phantom: 3, S_Uchronia: 1 } }
       ]
     },
     {
       id: 13,
-      text: "A Pandemonium entity offers you a 'Mastery' of your chosen field. The catch?",
+      text: "If a Pandemonium entity offers you 'Mastery' of your field, which catch do you accept?",
       options: [
         { text: "I can never cross running water again. I'll take the strength.", scores: { S_Covenants: 3 } },
         { text: "I will never feel natural hunger or thirst again—only the fever of the Thrum.", scores: { S_Trophic: 3 } },
@@ -134,7 +135,7 @@ const quizData = {
     },
     {
       id: 14,
-      text: "When a plan fails, your first instinct is to...",
+      text: "When a plan fails, what is your first instinct?",
       options: [
         { text: "Brace for impact and trust in my resilience to weather the fallout.", scores: { A_Anchor: 2, S_Augmentation: 1 } },
         { text: "Instantly calculate the statistical odds of every escape route.", scores: { A_Conduit: 2, S_Wyrding: 1 } },
@@ -144,7 +145,7 @@ const quizData = {
     },
     {
       id: 15,
-      text: "Which statement resonates most with you?",
+      text: "Which of these statements resonates most deeply with your philosophy?",
       options: [
         { text: "'Steel and logic are the only things that don't lie.'", scores: { Pure_Cyber: 1, S_Sanitization: 1 } },
         { text: "'Flesh is a conversation that never stops changing.'", scores: { Pure_Bio: 1, S_Morphological: 1 } },
@@ -175,23 +176,23 @@ const quizData = {
       Tri_Hybrid: { title: "The Convergence Anomaly", description: "You are a living contradiction. Flesh, metal, and magic war within you, making you a completely unpredictable, highly volatile entity." }
     },
     subspecialties: {
-      S_Symbiotic: { title: "Symbiotic Branch (Bio)", horror: "Hosting a sentient 'Passenger'.", manifestation: "You are never truly alone. If you don't feed it, it will eat you from the inside out." },
-      S_Morphological: { title: "Morphological Branch (Bio)", horror: "The loss of a permanent shape.", manifestation: "Your body is a shifting lattice of chitin and muscle. You might 'forget' how to be human." },
-      S_Pheromonal: { title: "Pheromonal Branch (Bio)", horror: "The death of genuine emotion.", manifestation: "You can command a room with a scent, but your own endocrine system is a scorched wasteland." },
-      S_Proliferant: { title: "Proliferant Branch (Bio)", horror: "Identity erosion in the Hive.", manifestation: "You are a node in a fungal network. Your individual ego is being slowly digested by the colony." },
-      S_Trophic: { title: "Trophic Branch (Bio)", horror: "The Metabolic Fever.", manifestation: "You are nearly unkillable, but your body runs at a temperature that would cook a normal human." },
-      S_Mechanist: { title: "Mechanist Branch (Cyber)", horror: "The Cold Logic Personality.", manifestation: "You manage massive logistics with a thought, but biological empathy is becoming an 'error' in your code." },
-      S_Perceptics: { title: "Perceptics Branch (Cyber)", horror: "Chronic Sensory Overload.", manifestation: "You see the world as a cascading waterfall of data, detached from the 'natural' world." },
-      S_Augmentation: { title: "Augmentation Branch (Cyber)", horror: "Sensation Loss.", manifestation: "You can crush steel with your bare hands, but you can't feel the warmth of another person." },
-      S_Sanitization: { title: "Sanitization Branch (Cyber)", horror: "Biological Nausea & Migraines.", manifestation: "You carry 'Hard Reality' with you, suffering from permanent migraines and constant nausea." },
-      S_Processing: { title: "Processing Branch (Cyber)", horror: "Neural Burn.", manifestation: "You move as if everyone else is standing still, but every time you overclock, you can feel your brain cooking." },
-      S_Taibhsear: { title: "Taibhsear (Wytch)", horror: "Depersonalization.", manifestation: "You read minds by filtering out the 'noise', risking filtering out your own identity entirely." },
-      S_Wyrding: { title: "Wyrding (Wytch)", horror: "Pandemonium Attention.", manifestation: "Your luck is a debt that will eventually be collected by things that live in the Thrum." },
-      S_Alchemy: { title: "Alchemy & Pharma (Wytch)", horror: "The Fragility of Perfection.", manifestation: "You can bottle miracles, but your power is hyper-specific. One missed detail turns stability into a nightmare." },
-      S_Weft: { title: "Weft-Work (Wytch)", horror: "Memory Sacrifice.", manifestation: "To cast a spell, you must literally 'forget' the memory that fuels it." },
-      S_Uchronia: { title: "Uchronia (Wytch)", horror: "Spatial Amnesia.", manifestation: "The more you skip through space, the more the universe 'forgets' where you actually belong." },
-      S_Covenants: { title: "Covenants (Wytch)", horror: "The Uslovie (The Taboo).", manifestation: "Your power is backed by a Patron. The moment you break your Taboo, you will unravel instantly." },
-      S_Maya: { title: "Maya (Wytch)", horror: "Becoming the Lie.", manifestation: "You hold an illusion so long that you might forget who you were before the mask." }
+      S_Symbiotic: { title: "Symbiotic Branch", horror: "Hosting a sentient 'Passenger' from Pandemonium to provide specialized services.", manifestation: "The parasite provides power in exchange for nutrients, but it will consume your own tissues if left unfed." },
+      S_Morphological: { title: "Morphological Branch", horror: "Shifting physical form through mutable Pandemonium-derived chitin and bone.", manifestation: "Rapid shifts can lead to permanent deformities or a total collapse of biological integrity as your body 'forgets' its original shape." },
+      S_Pheromonal: { title: "Pheromonal Branch", horror: "Biological hacking through the manipulation of pheromones, neuro-toxins, and hormones.", manifestation: "Constant manipulation ravages your endocrine system, leading to permanent emotional numbness or volatile mood swings." },
+      S_Proliferant: { title: "Proliferant Branch", horror: "Utilizing micro-organism colonies and fungal networks to process data and manage environments.", manifestation: "Constant feedback from the hive-mind makes it difficult to distinguish your own thoughts from the colony's signals." },
+      S_Trophic: { title: "Trophic Branch", horror: "The total optimization of internal biology and chemical synthesis for survival and regeneration.", manifestation: "The body runs at a lethal temperature, requiring constant management of body heat and caloric intake to avoid cooking from the inside out." },
+      S_Mechanist: { title: "Mechanist Branch", horror: "Interfacing a human mind with the complex logistics and infrastructure of a Corporate City-State.", manifestation: "Heavy neural rewiring leads to a 'Cold Logic' personality, distancing your mind from biological empathy as you adapt to data structures." },
+      S_Perceptics: { title: "Perceptics Branch", horror: "Enhancement of the human sensory suite to acquire raw, unfiltered data and pierce magical illusions.", manifestation: "Chronic sensory overload causes permanent detachment from natural perception and a struggle to process environments without data overlays." },
+      S_Augmentation: { title: "Augmentation Branch", horror: "Replacing biological components with pre-breach chrome for raw physical power and durability.", manifestation: "Heavy augmentation leads to a gradual loss of physical sensation and a mental disconnect from your own biological body." },
+      S_Sanitization: { title: "Sanitization Branch", horror: "Utilizing specialized tools to actively suppress The Thrum and anchor 'Hard Reality'.", manifestation: "Sanitization fields are physically nauseating, causing chronic migraines and severe neural 'burn-out' in the host." },
+      S_Processing: { title: "Processing Branch", horror: "Pushing the brain beyond biological data limits to manage high-speed data and reaction times.", manifestation: "Biological components literally cook themselves during prolonged overclocking, leading to permanent cognitive degradation or system collapse." },
+      S_Taibhsear: { title: "Taibhsear", horror: "Using the mind as a sieve to isolate specific frequencies from the noise of The Thrum.", manifestation: "Filtering the world too often leads to a total loss of self-identity, leaving you a 'Semantic Ghost' with no signature of your own." },
+      S_Wyrding: { title: "Wyrding", horror: "The act of probability manipulation by stabilizing a single desired outcome within The Thrum.", manifestation: "Creating semantic gravity wells draws the attention of Pandemonium entities who hunger for your luck, turning fortune into a debt." },
+      S_Alchemy: { title: "Alchemy & Pharma", horror: "The imbuement of intent and reality-warping properties into physical, mobile products.", manifestation: "Obsession with hyper-specificity makes the power fragile; one missed detail in the stabilization protocol can result in a lethal backlash." },
+      S_Weft: { title: "Weft-Work", horror: "Creating persistent blessings, hexes, and wards by re-weaving the signature of The Thrum.", manifestation: "To fuel persistent change, you must literally 'forget' a concept or memory, hollowing out your past to build your power." },
+      S_Uchronia: { title: "Uchronia", horror: "Spatial relocation through 'Spatial Amnesia', forcing the universe to forget your starting coordinates.", manifestation: "Frequent uchronia makes the universe 'forget' where you belong, potentially leaving you lost in the gaps between realities." },
+      S_Covenants: { title: "Covenants", horror: "Forging a contract with an entity from Pandemonium to bypass your own willpower limitations.", manifestation: "Breaking your Taboo results in the instant withdrawal of stability, causing your own semantic signature to unravel instantly." },
+      S_Maya: { title: "Maya", horror: "The art of destabilizing consensus perception to manipulate the 'Grand Illusion' of reality.", manifestation: "If maintained too long, consensus inertia may lock a false identity permanently, causing you to become the lie you projected." }
     }
   }
 };

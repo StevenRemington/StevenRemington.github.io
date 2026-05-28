@@ -164,7 +164,7 @@
 
     chartConfigs.forEach(conf => {
       const data = conf.keys.map(key => scores[key]);
-      const labels = conf.keys.map(key => quizData.results.subspecialties[key].title.split(' (')[0]);
+      const labels = conf.keys.map(key => quizData.results.subspecialties[key].title);
 
       new Chart(document.getElementById(conf.id), {
         type: 'radar',
@@ -195,6 +195,16 @@
   }
 
   function populateLibrary() {
+    // Populate Combinations (Titles)
+    const comboContainer = document.getElementById('library-combos');
+    comboContainer.innerHTML = '';
+    for (const [key, combo] of Object.entries(quizData.results.combinations)) {
+      const entry = document.createElement('div');
+      entry.className = 'library-entry';
+      entry.innerHTML = `<h5>${combo.title}</h5><p>${combo.description}</p>`;
+      comboContainer.appendChild(entry);
+    }
+
     const systems = {
       'library-bio': ['S_Symbiotic', 'S_Morphological', 'S_Pheromonal', 'S_Proliferant', 'S_Trophic'],
       'library-cyber': ['S_Mechanist', 'S_Perceptics', 'S_Augmentation', 'S_Sanitization', 'S_Processing'],
@@ -208,7 +218,7 @@
         const spec = quizData.results.subspecialties[key];
         const entry = document.createElement('div');
         entry.className = 'library-entry';
-        entry.innerHTML = `<h5>${spec.title}</h5><p><em>${spec.horror}</em></p>`;
+        entry.innerHTML = `<h5>${spec.title}</h5><p>${spec.horror} ${spec.manifestation}</p>`;
         container.appendChild(entry);
       });
     }
