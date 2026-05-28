@@ -181,9 +181,10 @@ permalink: /projects/the-thrum-quiz/
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
   margin: 2em 0;
+  width: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .loadout-grid {
     grid-template-columns: 1fr;
   }
@@ -195,6 +196,7 @@ permalink: /projects/the-thrum-quiz/
   border-top: 4px solid #8a0303;
   display: flex;
   flex-direction: column;
+  min-width: 0; /* Prevents overflow */
 }
 
 .loadout-item h4 {
@@ -213,9 +215,10 @@ permalink: /projects/the-thrum-quiz/
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
   margin: 3em 0;
+  justify-items: center; /* Center items in their cells */
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .charts-grid {
     grid-template-columns: 1fr;
   }
@@ -225,6 +228,11 @@ permalink: /projects/the-thrum-quiz/
   padding: 1.5em;
   background: rgba(226, 218, 191, 0.2);
   border: 1px solid rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 350px; /* Prevents charts from becoming overly large and stretched */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .chart-label {
